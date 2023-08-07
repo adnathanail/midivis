@@ -5,12 +5,16 @@ class Particle {
   PVector velocity;
   PVector acceleration;
   float lifespan;
+  float radius;
+  color colour;
 
-  Particle(PVector l) {
+  Particle(PVector l, float r, color c) {
     acceleration = new PVector(0, 0.05);
     velocity = new PVector(random(-1, 1), random(-2, 0));
     position = l.copy();
     lifespan = 255.0;
+    radius = r;
+    colour = c;
   }
 
   void run() {
@@ -27,9 +31,9 @@ class Particle {
 
   // Method to display
   void display() {
-    stroke(255, lifespan);
-    fill(255, lifespan);
-    ellipse(position.x, position.y, 8, 8);
+    stroke(colour, lifespan);
+    fill(colour, lifespan);
+    ellipse(position.x, position.y, radius, radius);
   }
 
   // Is the particle still useful?

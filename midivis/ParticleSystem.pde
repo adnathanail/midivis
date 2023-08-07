@@ -10,8 +10,8 @@ class ParticleSystem {
     particles = new ArrayList<Particle>();
   }
 
-  void addParticle(PVector pos) {
-    particles.add(new Particle(pos));
+  void addParticle(PVector pos, float rad, color col) {
+    particles.add(new Particle(pos, rad, col));
   }
 
   void run() {
