@@ -56,7 +56,7 @@ public class MidiReceiver {
 }
 
 void setup() {
-    size(500, 500);
+    size(432, 784);
     background(0);
 
     MidiBus.list(); // List all available Midi devices on STDOUT. This will show each device's index and name.
